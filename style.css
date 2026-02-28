@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: pink;
+    text-align: center;
+}
+
+.login-box, .box {
+    background: lightblue;
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(128, 128, 128);
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background:purple;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: greenyellow;
+}
+
+#error {
+    color: rgb(199, 57, 57);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2> Welcome Student</h2>
+    <p>Pre-order your food here</p>
+
+    <select id="food">
+        <option value="">Select Item</option>
+        <option value="Idli">Idli</option>
+        <option value="Dosa">Dosa</option>
+        <option value="Poori">Poori</option>
+        <option value="Meals">Meals</option>
+    </select>
+
+    <input type="number" id="qty" placeholder="Quantity">
+
+    <button onclick="placeOrder()">Place Order</button>
+
+    <p id="msg"></p>
+
+    <br><br>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+function placeOrder() {
+
+    let food = document.getElementById("food").value;
+    let qty = document.getElementById("qty").value;
+    let msg = document.getElementById("msg");
+
+    if(food === "" || qty <= 0){
+        msg.innerHTML = " Please select item and quantity";
+        msg.style.color = "red";
+        return;
+    }
+
+    // Generate random token number
+    let token = Math.floor(Math.random() * 1000);
+
+    msg.innerHTML = " Order Placed!<br>Item: " + food +
+                    "<br>Qty: " + qty +
+                    "<br>Token No: " + token;
+
+    msg.style.color = "green";
+}
+
+function logout(){
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
